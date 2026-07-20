@@ -1,0 +1,12 @@
+class Solution:
+    def largestGoodInteger(self, num):
+        largest = ""
+
+        for i in range(len(num) - 2):
+            if num[i] == num[i + 1] == num[i + 2]:
+                candidate = num[i:i + 3]
+
+                if candidate > largest:
+                    largest = candidate
+
+        return largest
