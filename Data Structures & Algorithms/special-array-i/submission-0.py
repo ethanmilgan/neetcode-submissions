@@ -1,0 +1,7 @@
+class Solution:
+    def isArraySpecial(self, nums):
+        for i in range(len(nums) - 1):
+            # If both numbers have the same parity
+            if nums[i] % 2 == nums[i + 1] % 2:
+                return False
+        return True
